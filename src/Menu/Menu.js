@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 // router
 import { withRouter } from 'react-router-dom';
@@ -7,29 +7,34 @@ import { withRouter } from 'react-router-dom';
 import './Menu.css';
 
 const Menu = () => {
-  return (
-    <div className="Menu">
-        <div className="m-item m-logo"
-            onClick={null}>
-            Website
+    const [openMenu, setOpenMenu] = useState(false)
+
+    const setClassNames = num => {
+        const classArr = ["m-item"];
+        if (openMenu) classArr.push(`open-${num}`)
+
+        return classArr.join(' ')
+    }
+
+    return (
+        <div className="Menu">
+            <div className={setClassNames(1) + " m-logo"}
+                onClick={() => setOpenMenu(!openMenu)}>
+                Home
+            </div>
+            <div className={setClassNames(2)}
+                onClick={null}>
+                Dashboard
+            </div>
+            <div className={setClassNames(3)}
+                onClick={null}>
+                Settings
+            </div>
+            <div className={setClassNames(4)}
+                onClick={null}>
+                Sign out
+            </div>
         </div>
-        <div className="m-item"
-            onClick={null}>
-            Dashboard
-        </div>
-        <div className="m-item"
-            onClick={null}>
-            Information
-        </div>
-        <div className="m-item"
-            onClick={null}>
-            Settings
-        </div>
-        <div className="m-item"
-            onClick={null}>
-            Sign out
-        </div>
-    </div>
   );
 }
 
