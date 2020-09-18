@@ -1,0 +1,23 @@
+.Menu{
+    position: relative;
+    margin: 1em;
+    width: 10em;
+}
+
+.m-item{
+    width: 6em;
+    height: 1.5em;
+    position: absolute;
+    font-size: 1.5em;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.m-logo{
+    z-index: 10;
+    font-weight: bold;
+}
