@@ -2,15 +2,14 @@
 
 .Menu{
     position: relative;
-    margin: 1em;
-    width: 10em;
+    margin: 2em 3em;
 }
 
 .m-item{
     position: absolute;
     top: 0;
     
-    width: 6em;
+    width: 5.5em;
     background-color: #00BBF9;
 
     padding: 0.2em;
@@ -29,26 +28,22 @@
     transition: 1s;
 }
 .m-item:hover{
-    border: 1px solid #BB0A21;
+    border: 1px solid black;
 }
 
 .m-logo{
     z-index: 10;
-    font-weight: bold;
 }
 
 .open-1{
-
-}
-.open-2{
     top: 1.8em;
     background-color: #9b5de5;
 }
-.open-3{
+.open-2{
     top: 3.6em;
     background-color: #f15bb5;
 }
-.open-4{
+.open-3{
     top: 5.4em;
     background-color: #301A4B;
 }
