@@ -15,7 +15,7 @@ const App = () => {
       <div className="App">
         {/* dropdown menu */}
         <Menu/>
-        {/* push to specific routes */}
+        {/* routes */}
         <Switch>
           <Route exact path="/settings" component={null} />
           <Route exact path="/dashboard" component={null} />

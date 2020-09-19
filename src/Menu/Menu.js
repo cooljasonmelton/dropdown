@@ -10,18 +10,18 @@ const Menu = props => {
     // conditionally render dropdown affect based on this boolean
     const [openMenu, setOpenMenu] = useState(false)
 
-    // takes route string as parameter
-    const pushToRoute = route => {
-        props.history.push(route)
-        setOpenMenu(false)
-    }
-
     // parameter num corresponds to .open-# classes
     // is assigned when Menu clicked triggering animated dropdown
     const setClassNames = num => {
         const classArr = ["m-item"];
         if (openMenu) classArr.push(`open-${num}`)
         return classArr.join(' ')
+    }
+
+    // takes route string as parameter
+    const pushToRoute = route => {
+        props.history.push(route)
+        setOpenMenu(false)
     }
 
     return (
